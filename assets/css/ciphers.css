@@ -13,14 +13,112 @@
   color: rgba(35, 117, 224, 0.9);
 }
 
+#activeBinaryBack{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1;
+  height: 100%;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-size: 19px;
+  font-weight: bold;
+  font-family: Arial;
+  transition: all 0.5s ease;
+  color: rgba(255, 255, 255, 0.5);
+  background: linear-gradient(to bottom right, #ccffff 0%, #6699ff 100%);
+}
 
-/*------------general CSS for all Cypher pages below here-------------*/
+/* -------green cypgher page theme for Transposition cypher---------- */
+
+.greenBox{
+  /* background-color: rgba(41, 128, 185, 0.8); */
+  background-color: rgba(87, 178, 14, 0.8);
+  color: white;
+}
+
+.hoveredGreenBox{
+  background-color: rgba(87, 178, 14, 1);
+}
+
+.greenText{
+  color: rgba(80, 165, 11, 0.9);
+}
+
+div#keyChoice span:first-of-type{
+  margin-right: 10px;
+}
+div#keyChoice span{
+  transition: opacity 0.3s;
+}
+
+#keyChoice{
+  margin-bottom: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+#activeTransposBack{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1;
+  height: 100%;
+  font-size: 300px;
+  line-height: 300px;
+  font-weight: bold;
+  letter-spacing: -12px;
+  font-family: Arial;
+  transition: all 0.5s ease;
+  color: rgba(255, 255, 255, 0.5);
+  background: linear-gradient(to bottom right, #e7ffd3 0%, #bddb59 100%);
+}
+
+#activeTransposBack div.leftActive{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#activeTransposBack div.rightActive{
+  position: absolute;
+  right: 0;
+  top: 0;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+#activeTransposBack div.leftBotActive{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#activeTransposBack div.rightBotActive{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+
+/*------------general CSS for ALL Cypher pages below here-------------*/
 html{
   height: 100%;
 }
 body {
+  height: 100%;
   background-size: cover;
   font-family: Arial;
+  min-width: 600px;
 }
 
 textarea {
@@ -119,6 +217,11 @@ div.containerAbout span{
   color: rgba(255,255,255, 0.4);
 }
 
+.backshadow{
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
 #lBox1Head{
   text-transform: uppercase;
   text-align: center;
@@ -130,24 +233,6 @@ div.containerAbout span{
   letter-spacing: 2px;
 }
 
-#activeBinaryBack{
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  overflow: hidden;
-  z-index: -1;
-  height: 100%;
-  writing-mode: vertical-lr;
-  text-orientation: upright;
-  font-size: 19px;
-  font-weight: bold;
-  font-family: Arial;
-  transition: all 0.5s ease;
-  color: rgba(255, 255, 255, 0.5);
-  background: linear-gradient(to bottom right, #ccffff 0%, #6699ff 100%);
-}
 #middleIconContainer{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -191,11 +276,12 @@ div.containerAbout span{
 }
 
 #moreAboutCypher{
-  transition: all 0.7s;
+  transition: all 0.5s;
 }
 
 #moreAboutElab{
   text-transform: none;
   background-color: white;
   padding: 10px 15px;
+  text-align: left;
 }

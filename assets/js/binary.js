@@ -7,14 +7,22 @@ var moreInfoBtn = document.getElementById('moreAboutCypher');
 var plainTextString;
 var cypheredTextString;
 
-inputPlain.addEventListener("click", function(){
+inputPlain.addEventListener("focusout", function(){
   arrowRight.classList.remove("dimArrow");
+  arrowLeft.classList.remove("dimArrow");
+});
+
+inputCypher.addEventListener("focusout", function(){
+  arrowRight.classList.remove("dimArrow");
+  arrowLeft.classList.remove("dimArrow");
+});
+
+inputPlain.addEventListener("focusin", function(){
   arrowLeft.classList.add("dimArrow");
 });
 
-inputCypher.addEventListener("click", function(){
+inputCypher.addEventListener("focusin", function(){
   arrowRight.classList.add("dimArrow");
-  arrowLeft.classList.remove("dimArrow");
 });
 
 inputPlain.addEventListener("keyup", function(){
@@ -36,7 +44,10 @@ moreInfoBtn.addEventListener("click", function(){
   document.getElementById('moreAboutElab').classList.toggle("infoInvisible");
 });
 
+
+
 updateBackground();
+
 window.onresize = function(){
   updateBackground();
 }
