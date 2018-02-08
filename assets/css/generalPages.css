@@ -1,0 +1,15 @@
+/* styles for the index page and design page */
+
+.grayBox{
+  /* background-color: rgba(41, 128, 185, 0.8); */
+  background-color: rgba(50, 50, 50, 0.8);
+  color: white;
+}
+
+.hoveredGrayBox{
+  background-color: rgba(50, 50, 50, 1);
+}
+
+.grayText{
+  color: rgba(50, 50, 50, 0.9);
+}

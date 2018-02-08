@@ -1,0 +1,77 @@
+
+/* -------green cypgher page theme for Transposition cypher---------- */
+
+.greenBox{
+  /* background-color: rgba(41, 128, 185, 0.8); */
+  background-color: rgba(87, 178, 14, 0.8);
+  color: white;
+}
+
+.hoveredGreenBox{
+  background-color: rgba(87, 178, 14, 1);
+}
+
+.greenText{
+  color: rgba(80, 165, 11, 0.9);
+}
+
+div#keyChoice span:first-of-type{
+  margin-right: 10px;
+}
+div#keyChoice span{
+  transition: opacity 0.3s;
+}
+
+#keyChoice{
+  margin-bottom: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+#activeTransposBack{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1;
+  height: 100%;
+  font-size: 300px;
+  line-height: 300px;
+  font-weight: bold;
+  letter-spacing: -12px;
+  font-family: Arial;
+  transition: all 0.5s ease;
+  color: rgba(255, 255, 255, 0.5);
+  background: linear-gradient(to bottom right, #e7ffd3 0%, #bddb59 100%);
+}
+
+#activeTransposBack div.leftActive{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#activeTransposBack div.rightActive{
+  position: absolute;
+  right: 0;
+  top: 0;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+#activeTransposBack div.leftBotActive{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#activeTransposBack div.rightBotActive{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}

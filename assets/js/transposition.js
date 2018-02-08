@@ -8,16 +8,13 @@ var plainTextString;
 var cypheredTextString;
 var cipherKeys = document.querySelectorAll('div#keyChoice span');
 
-var currentLetter = 'K';
-var possibleKeys =[4, 3, 6, 5];
+var currentLetter = 'E';
+var possibleKeys =[2, 5, 7, 9];
 var letterValuePairs= [];
 var numOfColumns;
 
 
 init();
-
-
-
 
 //-------------------functions-------------------
 
@@ -41,8 +38,6 @@ function init(){
 
   updateCipherSettings(currentLetter);
   updateKeyDisplay();
-  console.log(currentLetter);
-  console.log(numOfColumns);
 
   for(var i = 1; i<cipherKeys.length; i++){
 
@@ -50,8 +45,6 @@ function init(){
 
       updateCipherSettings(this.innerText);
       updateKeyDisplay();
-      console.log(currentLetter);
-      console.log(numOfColumns);
     });
 
     cipherKeys[i].addEventListener("mouseenter", function(){
@@ -84,11 +77,11 @@ function init(){
   });
 
   inputPlain.addEventListener("keyup", function(){
-    // updateCypherOutput();
+    updateCypherOutput();
   });
 
   inputCypher.addEventListener("keyup", function(){
-    // updatePlaintextOutput();
+    updatePlaintextOutput();
   });
 
   moreInfoBtn.addEventListener("mouseover", function(){
@@ -111,22 +104,12 @@ function init(){
 
 
 function updateKeyDisplay() {
-  makeAllTransparent();
   for(var i = 1; i<cipherKeys.length; i++){
     if(cipherKeys[i].innerText === currentLetter){
       cipherKeys[i].style.opacity = "1";
     } else {
-      cipherKeys[i].style.opacity = "0.5";
+      cipherKeys[i].style.opacity = "0.4";
     }
-  }
-}
-// makeAllTransparent();
-// keyObj.style.opacity = "1";
-
-
-function makeAllTransparent() {
-  for(var i = 1; i<cipherKeys.length; i++){
-    cipherKeys[i].style.opacity = "0.5";
   }
 }
 
@@ -142,29 +125,54 @@ function updateCipherSettings(str) {
 
 
 
-// function updateCypherOutput(){
-//   var input = inputPlain.value;
-//   var output = "";
-//   for(var i=0; i<input.length; i++){
-//     output += input[i].charCodeAt(0).toString(2) + " ";
-//   }
-//   inputCypher.value = output;
-// }
-//
-// function updatePlaintextOutput(){
-//   var input = inputCypher.value;
-//   var output = "";
-//   var tempChar = "";
-//   for(var i=0; i<input.length; i++){
-//     if(input[i] === " "){
-//       output += String.fromCharCode(parseInt(tempChar, 2).toString(10));
-//       tempChar = "";
-//     } else {
-//       tempChar += input[i];
-//     }
-//   }
-//   inputPlain.value = output;
-// }
+function updateCypherOutput(){
+  var input = inputPlain.value;
+  var numOfRows = Math.ceil(input.length/numOfColumns);
+  var plainTextArray =[];
+  var cypheredString ="";
+
+  for (var i =0; i<numOfRows; i++){
+    var oneLine ="";
+    oneLine = input.slice(i*numOfColumns, (i+1)*numOfColumns);
+    plainTextArray.push(oneLine);
+  }
+
+
+  for(var i = 0; i<numOfColumns; i++){
+    for(var j = 0; j<numOfRows; j++){
+      if(plainTextArray[j].charAt(i) === "") {
+        cypheredString += "∞";
+      } else {
+        cypheredString += plainTextArray[j].charAt(i);
+      }
+    }
+  }
+  inputCypher.value = cypheredString;
+}
+
+function updatePlaintextOutput(){
+  var input = inputCypher.value;
+  var numOfRows = Math.ceil(input.length/numOfColumns);
+  var cipheredTextArray =[];
+  var plainString = "";
+
+  for (var i =0; i<numOfColumns; i++){
+    var oneLine ="";
+    oneLine = input.slice(i*numOfRows, (i+1)*numOfRows);
+    cipheredTextArray.push(oneLine);
+  }
+
+  for(var i = 0; i<numOfRows; i++){
+    for(var j = 0; j<numOfColumns; j++){
+      if(cipheredTextArray[j].charAt(i) === "∞") {
+        plainString += "";
+      } else {
+        plainString += cipheredTextArray[j].charAt(i);
+      }
+    }
+  }
+  inputPlain.value = plainString;
+}
 
 function updateBackground() {
   var backElements = document.querySelectorAll('div#activeTransposBack div');
