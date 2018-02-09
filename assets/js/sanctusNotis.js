@@ -115,7 +115,7 @@ function updateCypherOutput(){
   for(var i=0; i<input.length; i++){
     for(var j=0; j<keyWords.length; j++){
       for(var k=0; k<keyWords[j].letter.length; k++){
-        if(keyWords[j].letter[k] === String.fromCharCode(input.charCodeAt(i))){
+        if(input[i] === keyWords[j].letter[k]){
           output+= keyWords[j].pWord[Math.round(Math.random())] + " ";
           break;
         }
@@ -127,18 +127,35 @@ function updateCypherOutput(){
 }
 
 function updatePlaintextOutput(){
-  // var input = inputCypher.value;
-  // var output = "";
-  // var tempChar = "";
-  // for(var i=0; i<input.length; i++){
-  //   if(input[i] === " "){
-  //     output += String.fromCharCode(parseInt(tempChar, 2).toString(10));
-  //     tempChar = "";
-  //   } else {
-  //     tempChar += input[i];
-  //   }
-  // }
-  // inputPlain.value = output;
+  var input = inputCypher.value;
+  var output = "";
+  var currWord = "";
+  var words = [];
+
+  // add every word before the comma into the words array
+  for(var i = 0; i<input.length; i++){
+    if(input[i] === " "){
+      words.push(currWord);
+      currWord = "";
+    } else if(input[i] === ","){
+      break;
+    } else {
+      currWord += input[i];
+    }
+  }
+
+  for(var i=0; i<words.length; i++){
+    for(var j=0; j<keyWords.length; j++){
+      for(var k =0; k<keyWords[j].pWord.length; k++){
+        if(words[i] === keyWords[j].pWord[k]){
+          output+= keyWords[j].letter[0];
+          break;
+        }
+      }
+    }
+  }
+
+  inputPlain.value = output;
 }
 
 function updateBackground() {
