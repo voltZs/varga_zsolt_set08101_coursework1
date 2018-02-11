@@ -9,6 +9,7 @@ div.navBarContainer{
   height: 40px;
   margin: 0;
   padding: 0 20px;
+  z-index: 1;
 }
 
 div.navBarField{
@@ -20,6 +21,7 @@ div.navBarField{
   font-weight: bold;
   color:white;
   font-size: 16px;
+  vertical-align: top;
 }
 
 div.navBarField:hover{
@@ -60,7 +62,6 @@ div.dropDownItem{
   transition: all 0.3s;
   font-weight: bold;
   font-size: 0px;
-  opacity: inherit;
   color: white;
 }
 
@@ -70,6 +71,7 @@ div.dropDownItemLarge{
   font-size: 16px;
   text-decoration: none;
 }
+
 a {
   text-decoration: none;
 }
@@ -83,4 +85,5 @@ div.dropDownItem:hover{
 div.navBarActive{
   background-color: rgba(255, 255, 255, 0.25);
   font-size: 18px;
+  line-height: 40px;
 }

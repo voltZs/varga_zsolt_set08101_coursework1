@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="assets/css/navbar.css">
   </head>
   <body>
+<div class="bigOlContainer">
+
 
     <!-- background -->
     <div id="activeTransposBack">
@@ -70,30 +72,30 @@
     <!--  the actual body of the page-->
     <div class="container">
       <div class="containerTop">
-        <h1 class="greenText">
+        <h2 class="greenText">
           Transposition Cipher
-        </h1>
+        </h2>
         <div class="shortInfo greenBox backshadow">
-          <h2>Transposition</h2>
+          <h3>Transposition</h3>
           <p>As the name suggests, the transposition cipher is based on rearranging
             the letters of plaintext. This is done by placing the text in a table with an unknown number of columns.</p>
           <p>To translate your plaintext into transposition cipher, select a key (A-Z) and start typing into the respective input field below.</p>
         </div>
       </div>
       <div id="keyChoice" class="greenText">
-        <h2>
+        <h3>
           <span>KEY</span> <span>A</span> <span>B</span> <span>C</span> <span>D</span>
           <span>E</span> <span>F</span> <span>G</span> <span>H</span> <span>I</span>
           <span>J</span> <span>K</span> <span>L</span> <span>M</span> <span>N</span>
           <span>O</span> <span>P</span> <span>Q</span> <span>R</span> <span>S</span>
           <span>T</span> <span>U</span> <span>V</span> <span>W</span> <span>X</span>
           <span>Y</span> <span>Z</span>
-        </h2>
+        </h3>
       </div>
       <div class="containerBttm">
         <div id="langBox1" class="greenBox backshadow">
           <div id="lBox1Head">
-            <h2>Plaintext</h2>
+            <h3>Plaintext</h3>
           </div>
           <textarea name="name" rows="8" cols="80" placeholder="Insert text in your language here"></textarea>
         </div>
@@ -107,7 +109,7 @@
         </div>
         <div id="langBox2" class="greenBox backshadow">
           <div id="lBox2Head">
-            <h2>Transposition</h2>
+            <h3>Transposition</h3>
           </div>
           <textarea name="name" rows="8" cols="80" placeholder="Insert transpositioned text here"></textarea>
         </div>
@@ -126,7 +128,9 @@
         </div>
       </div>
     </div>
+
     <script src="assets/js/transposition.js"></script>
     <script src="assets/js/navbar.js"></script>
+
   </body>
 </html>

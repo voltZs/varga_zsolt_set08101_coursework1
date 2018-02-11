@@ -8,7 +8,10 @@ body {
   background-size: cover;
   font-family: Arial;
   min-width: 600px;
+}
 
+div.bigOlContainer{
+    padding-bottom: 40px;
 }
 
 @keyframes jumpIn {
@@ -49,12 +52,21 @@ textarea:focus {
 }
 
 h1{
-  width: 260px;
-  text-align: center;
+  width: 100%;
   margin: 20px auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 65px;
 }
 
-h2 {
+h2{
+  width: 100%;
+  text-align: center;
+  margin: 20px auto;
+  font-size: 28px;
+}
+
+h3 {
   font-size: 20px;
   margin: 3px 0;
 }
@@ -90,9 +102,6 @@ div.shortInfo p{
   margin-bottom: 15px;
 }
 
-.containerTop{
-}
-
 .containerBttm{
   margin-bottom: 15px;
 }
@@ -117,8 +126,7 @@ div.containerAbout span{
 }
 
 .backshadow{
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 0px 30px rgba(0, 0, 0, 0.15);
 }
 
 #lBox1Head{

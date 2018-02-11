@@ -1,0 +1,130 @@
+
+.whiteBox{
+  background-color: white;
+  padding: 40px 20px;
+  text-align: justify;
+}
+
+.paperClipsTop{
+  width: 100%;
+}
+
+.paperClip{
+  float: left;
+  height:40px;
+  width: 10px;
+  border-radius: 2.5px;
+}
+
+.emptyDiv{
+  height: 20px;
+  width: 100%;
+}
+
+.designItem{
+  /* position: relative; */
+  display: table;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.designItemLeftSide{
+  display: table-cell;
+  vertical-align: middle;
+  box-sizing: border-box;
+  text-align: center;
+  width: 40%;
+}
+
+.designItemLRightSide{
+  display: table-cell;
+  vertical-align: middle;
+  box-sizing: border-box;
+  text-align: justify;
+  width: 60%;
+}
+
+div.designItemLeftSide div{
+  margin: 0 auto;
+}
+
+/* elements used in design doc  */
+#elem1{
+  margin: 0;
+  line-height: 65px;
+}
+
+#elem3{
+  text-align: center;
+}
+
+#elem4{
+  width: 100px;
+}
+
+#elem5{
+  width: 100px;
+}
+
+div.designItemLeftSide div.colourExample{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 7px;
+}
+
+#elem6{
+  width: 201px;
+}
+
+#elem7{
+  width: 160px;
+  text-align: center;
+}
+
+#elem8Head {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 3px;
+  margin: 0 0;
+}
+
+div#elem8Head h3{
+  margin: 0;
+}
+
+#elem8 {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 70%;
+  vertical-align: top;
+}
+
+div#elem8 textarea{
+  height: 60px;
+}
+
+#elem9{
+  width: 190px;
+  padding: 0 20px ;
+}
+
+#elem10{
+  width: 200px;
+  height:80px;
+  transition: all 0.3s;
+  font-weight: bold;
+  color: white
+}
+
+div#elem10 div.dropDownItem{
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+}
+
+#elem11{
+  width: 70%;
+}
