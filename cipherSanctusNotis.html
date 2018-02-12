@@ -91,12 +91,28 @@
           <span>More about Sanctus Notis</span>
         </div>
         <div id="moreAboutElab" class="orangeText infoInvisible">
-          <p>
-          Pickled direct trade post-ironic affogato, blue bottle distillery thundercats live-edge kombucha. Waistcoat hoodie aliqua heirloom post-ironic thundercats shabby chic organic edison bulb tousled 90's jean shorts. Venmo poutine bicycle rights man bun, gluten-free try-hard master cleanse next level exercitation. Kombucha tumblr magna labore, paleo tempor pinterest jianbing brunch ex.
+          <h3>Sansctus Notis</h3>
+          <p>This cipher is influenced by the Ave Maria cipher and takes a fun approach
+            to encoding text. Every letter of the alphabet has several Latin prayer words
+            associated with it. After enciphering the text, the output is supposed
+            to look like a christian prayer written in Latin.
           </p>
-          <p>
-          Migas esse incididunt helvetica cold-pressed vegan meditation pug lomo offal leggings eu magna. Etsy anim hot chicken quinoa ramps ea semiotics. DIY vegan laboris voluptate kickstarter small batch. Try-hard vexillologist exercitation, keffiyeh minim flexitarian before they sold out letterpress celiac taiyaki actually deserunt chillwave. Before they sold out banh mi hell of skateboard fam iceland. Chambray occupy man bun drinking vinegar locavore la croix. Williamsburg franzen sint, glossier enamel pin single-origin coffee salvia farm-to-table.
+          <p>Since each letter contains several values (Latin words) that are chosen at random
+            when translating, the same input will give a different output each time.
           </p>
+          <p><strong>Example:</strong>
+            <br>The letters H and I are associated with these words:
+            <br>H ('gloria', 'vivificantem')
+            <br>I ('mortuorum', 'saeculi')
+          <br>The word "<strong>Hi</strong>" will then have 4 different translations.
+          <ul>
+            <li>gloria mortuorum</li>
+            <li>gloria saeculi</li>
+            <li>vivificantem mortuorum</li>
+            <li>vivificantem saeculi</li>
+          </ul> </p>
+          <p>This means, the number of possible translations for any string will be
+          <strong>2<sup>n</sup> </strong> where <strong>n = length of the string</strong>.</p>
         </div>
       </div>
     </div>

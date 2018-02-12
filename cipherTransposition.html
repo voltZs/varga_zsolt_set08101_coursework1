@@ -119,12 +119,69 @@
           <span>More about transposition</span>
         </div>
         <div id="moreAboutElab" class="greenText infoInvisible">
+          <h3>Transposition Cipher</h3>
           <p>
-          Pickled direct trade post-ironic affogato, blue bottle distillery thundercats live-edge kombucha. Waistcoat hoodie aliqua heirloom post-ironic thundercats shabby chic organic edison bulb tousled 90's jean shorts. Venmo poutine bicycle rights man bun, gluten-free try-hard master cleanse next level exercitation. Kombucha tumblr magna labore, paleo tempor pinterest jianbing brunch ex.
+            As mentioned before, the transposition cipher works on the basis of
+            shuffling letters. The principle is quite straightforward: plaintext
+            is placed horizontally into a table, where each character
+            occupies one cell. The text is then read vertically.
           </p>
-          <p>
-          Migas esse incididunt helvetica cold-pressed vegan meditation pug lomo offal leggings eu magna. Etsy anim hot chicken quinoa ramps ea semiotics. DIY vegan laboris voluptate kickstarter small batch. Try-hard vexillologist exercitation, keffiyeh minim flexitarian before they sold out letterpress celiac taiyaki actually deserunt chillwave. Before they sold out banh mi hell of skateboard fam iceland. Chambray occupy man bun drinking vinegar locavore la croix. Williamsburg franzen sint, glossier enamel pin single-origin coffee salvia farm-to-table.
+          <p><strong>The number of columns is chosed by the key.</strong> Every letter in the
+            alphabet has a number associated with it. The user chooses a letter,
+            without knowing what number it stands for. After the number of columns
+            is chosen, the number of rows depens only on the length of the string.
+            <br>When the string doesn't occupy every cell in the table, the remaining
+            cells are filled with a chosen special sign that acts like a placeholder,
+            so the cipher can be later translated in the other direction as well. For
+            this purpose, the '∞' symbol is used.
           </p>
+
+          <p>The figure below shows a visual example of how the cipher functions.
+          <br><strong>The chosen key is number 4.</strong>
+          <br>Input: <strong>Donuts are awesome!</strong>
+          </p>
+
+          <table>
+            <tr>
+              <td>D</td>
+              <td>o</td>
+              <td>n</td>
+              <td>u</td>
+            </tr>
+            <tr>
+              <td>t</td>
+              <td>s</td>
+              <td> </td>
+              <td>a</td>
+            </tr>
+            <tr>
+              <td>r</td>
+              <td>e</td>
+              <td> </td>
+              <td>a</td>
+            </tr>
+            <tr>
+              <td>w</td>
+              <td>e</td>
+              <td>s</td>
+              <td>o</td>
+            </tr>
+            <tr>
+              <td>m</td>
+              <td>e</td>
+              <td>!</td>
+              <td>∞</td>
+            </tr>
+          </table>
+
+          <p>Output: <strong>Dtrwmoseeen <span></span> s!uaao∞</strong>
+          </p>
+
+          <p>The cipher can take any input, however using the ∞ symbol is not advised
+          as it will be ommited when translated in the other direction.
+          <br>Also, it is necessary
+          that the input's length is larger than the key, therefore use this cipher
+          for longer strings only.</p>
         </div>
       </div>
     </div>

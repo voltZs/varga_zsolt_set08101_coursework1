@@ -75,3 +75,13 @@ div#keyChoice span{
   direction: rtl;
   unicode-bidi: bidi-override;
 }
+
+td{
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 30px;
+  height: 20px;
+}
+table{
+  margin: 0 auto;
+}
