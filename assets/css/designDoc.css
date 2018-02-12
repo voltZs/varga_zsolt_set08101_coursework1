@@ -1,7 +1,7 @@
 
 .whiteBox{
   background-color: white;
-  padding: 40px 20px;
+  padding: 40px;
   text-align: justify;
 }
 
@@ -41,6 +41,7 @@
   vertical-align: middle;
   box-sizing: border-box;
   text-align: justify;
+  padding-left: 20px;
   width: 60%;
 }
 
