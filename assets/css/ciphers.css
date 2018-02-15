@@ -1,10 +1,13 @@
 /*------------general CSS for ALL Cypher pages below here-------------*/
 html{
   height: 100%;
+
 }
 body {
+  padding-top:60px;
   margin: 0;
   height: 100%;
+  min-height: 100vh;
   background-size: cover;
   font-family: Arial;
   min-width: 600px;
@@ -17,7 +20,7 @@ div.bigOlContainer{
 @keyframes jumpIn {
     0%    { margin: 1300px auto;
             opacity: 0;}
-    100%  { margin: 60px auto;
+    100%  { margin: 0px auto;
             opacity: 1;}
 }
 
@@ -92,7 +95,7 @@ div.shortInfo p{
   width: 70%;
   min-width: 650px;
   max-width: 1000px;
-  margin: 60px auto;
+  margin: 0 auto 60px auto;
 
 }
 

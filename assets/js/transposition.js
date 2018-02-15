@@ -8,8 +8,8 @@ var plainTextString;
 var cypheredTextString;
 var cipherKeys = document.querySelectorAll('div#keyChoice span');
 
-var currentLetter = 'E';
-var possibleKeys =[2, 5, 7, 9];
+var currentLetter = 'F';
+var possibleKeys =[2, 5, 7, 9, 8, 4, 3, 5, 3, 8, 9, 7, 5, 6, 2, 3, 5, 5, 4, 2];
 var letterValuePairs= [];
 var numOfColumns;
 
@@ -20,7 +20,7 @@ init();
 
 function init(){
 
-  // add key value pairs for the whole alphabet into the letterValuePairs
+  // add key value objects for the whole alphabet into the letterValuePairs
   // variable based on the possibleKeys array
 
   var count = 0;

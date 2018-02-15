@@ -102,8 +102,6 @@ moreInfoBtn.addEventListener("click", function(){
 
 
 
-updateBackground();
-
 window.onresize = function(){
   updateBackground();
 }
@@ -122,7 +120,11 @@ function updateCypherOutput(){
       }
     }
   }
-  output+= ", Amen.";
+  if(input.length>0){
+    output = output.substring(0, output.length-1);
+    output+= ", Amen.";
+  }
+
   inputCypher.value = output;
 }
 
@@ -134,11 +136,12 @@ function updatePlaintextOutput(){
 
   // add every word before the comma into the words array
   for(var i = 0; i<input.length; i++){
-    if(input[i] === " "){
+    if(input[i] === " " || input[i] === ","){
       words.push(currWord);
       currWord = "";
-    } else if(input[i] === ","){
-      break;
+      if(input[i] === ","){
+        break;
+      }
     } else {
       currWord += input[i];
     }
@@ -156,37 +159,4 @@ function updatePlaintextOutput(){
   }
 
   inputPlain.value = output;
-}
-
-function updateBackground() {
-  // activeBack.innerHTML ="";
-  // var firstChar = '1';
-  // var prevChar;
-  // //for every 19 pixels of screenwidth
-  // for(var j=0; j<(window.innerWidth/19+1); j++){
-  //   if(firstChar === '1'){
-  //     prevChar = '0';
-  //     firstChar = '0'
-  //   } else {
-  //     prevChar = '1';
-  //     firstChar = '1';
-  //   }
-  //   //create one line (vertical)
-  //   for(var i=0; i<(window.innerHeight/19+1); i++){
-  //     if(prevChar === '0'){
-  //       var aOne = document.createElement('span');
-  //       aOne.innerHTML = '1';
-  //       activeBack.appendChild(aOne);
-  //       prevChar = '1';
-  //     } else {
-  //       var aZero = document.createElement('span');
-  //       aZero.innerHTML = '0';
-  //       activeBack.appendChild(aZero);
-  //       prevChar = '0';
-  //     }
-  //   }
-  //   var aBr = document.createElement('br');
-  //   aBr.innerHTML = "<br>";
-  //   activeBack.appendChild(aBr);
-  // }
 }
