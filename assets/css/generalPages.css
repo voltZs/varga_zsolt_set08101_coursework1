@@ -13,6 +13,11 @@
 .grayText{
   color: rgba(50, 50, 50, 0.9);
 }
+
+.cipherLinkContainers{
+  height: 120px;
+}
+
 .linkBox{
   font-size: 23px;
   color: white;

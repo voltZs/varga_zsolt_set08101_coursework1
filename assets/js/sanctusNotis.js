@@ -101,12 +101,6 @@ moreInfoBtn.addEventListener("click", function(){
 });
 
 
-
-window.onresize = function(){
-  updateBackground();
-}
-
-
 function updateCypherOutput(){
   var input = inputPlain.value;
   var output = "";
