@@ -22,7 +22,6 @@
 }
 
 .designItem{
-  /* position: relative; */
   display: table;
   width: 100%;
   margin: 40px 0;
@@ -49,7 +48,7 @@ div.designItemLeftSide div{
   margin: 0 auto;
 }
 
-/* elements used in design doc  */
+/* ----------elements used in design doc----------  */
 #elem1{
   margin: 0;
   line-height: 65px;
@@ -128,4 +127,20 @@ div#elem10 div.dropDownItem{
 
 #elem11{
   width: 70%;
+}
+
+#elem12 {
+  width: 90%;
+  margin: 0 auto;
+}
+
+div#elem12 div.container{
+  width: 100%;
+  min-width: 200px;
+  max-width: 600px;
+  margin-bottom: 0;
+}
+
+.dimDocArrow{
+  color: rgba(50, 50, 50, 0.4);
 }
