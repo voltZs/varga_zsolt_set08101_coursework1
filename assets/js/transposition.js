@@ -19,39 +19,19 @@ init();
 //-------------------functions-------------------
 
 function init(){
-
-  // add key value objects for the whole alphabet into the letterValuePairs
-  // variable based on the possibleKeys array
-
-  var count = 0;
-  for(var i=65; i<91; i++){
-    var element = {};
-    element.letter = String.fromCharCode(i);
-    element.keyVal = possibleKeys[count];
-    letterValuePairs.push(element);
-    count++;
-    if(count=== possibleKeys.length){
-      count=0;
-    }
-  }
-
-
+  assignAlphabet();
   updateCipherSettings(currentLetter);
   updateKeyDisplay();
 
   for(var i = 1; i<cipherKeys.length; i++){
-
     cipherKeys[i].addEventListener("click", function(){
-
       updateCipherSettings(this.innerText);
       updateKeyDisplay();
     });
-
     cipherKeys[i].addEventListener("mouseenter", function(){
       updateKeyDisplay();
       this.style.opacity = "1";
     });
-
     cipherKeys[i].addEventListener("mouseleave", function(){
       updateKeyDisplay();
     });
@@ -70,10 +50,12 @@ function init(){
 
   inputPlain.addEventListener("focusin", function(){
     arrowLeft.classList.add("dimArrow");
+    updateCypherOutput();
   });
 
   inputCypher.addEventListener("focusin", function(){
     arrowRight.classList.add("dimArrow");
+    updatePlaintextOutput();
   });
 
   inputPlain.addEventListener("keyup", function(){
@@ -102,6 +84,21 @@ function init(){
   }
 }
 
+function assignAlphabet(){
+  // add key value objects for the whole alphabet into the letterValuePairs
+  // variable based on the possibleKeys array
+  var count = 0;
+  for(var i=65; i<91; i++){
+    var element = {};
+    element.letter = String.fromCharCode(i);
+    element.keyVal = possibleKeys[count];
+    letterValuePairs.push(element);
+    count++;
+    if(count=== possibleKeys.length){
+      count=0;
+    }
+  }
+}
 
 function updateKeyDisplay() {
   for(var i = 1; i<cipherKeys.length; i++){
@@ -122,9 +119,6 @@ function updateCipherSettings(str) {
   }
 }
 
-
-
-
 function updateCypherOutput(){
   var input = inputPlain.value;
   var numOfRows = Math.ceil(input.length/numOfColumns);
@@ -136,8 +130,6 @@ function updateCypherOutput(){
     oneLine = input.slice(i*numOfColumns, (i+1)*numOfColumns);
     plainTextArray.push(oneLine);
   }
-
-
   for(var i = 0; i<numOfColumns; i++){
     for(var j = 0; j<numOfRows; j++){
       if(plainTextArray[j].charAt(i) === "") {
