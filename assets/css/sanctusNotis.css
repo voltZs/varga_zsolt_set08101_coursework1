@@ -40,3 +40,9 @@ div#activeSanctusBack img{
   color: rgba(255, 255, 255, 0.5);
   background: linear-gradient(to bottom right, #fff8cc 0%, #ff7c66 101%);
 }
+
+#smallPrint{
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.5;
+}
