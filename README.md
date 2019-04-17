@@ -1,6 +1,6 @@
 # SET08101-cw1
 ## Cipher madness
-Coursework for Web Technologies module at Edinburgh Napier University
+Coursework for Web Technologies module at Edinburgh Napier University.
 Static website with three distinct cipher translators.
 
 Deployed version:
